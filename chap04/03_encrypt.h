@@ -1,0 +1,4 @@
+void encrypt(char *message);
+
+
+
