@@ -1,10 +1,10 @@
-03_encrypt.o: 03_encrypt.c
+03_encrypt.o: 03_encrypt.c 03_encrypt.h
 	gcc -c 03_encrypt.c
 
-strip.o: ../tools/strip.c
+strip.o: ../tools/strip.c ../tools/strip.h
 	gcc -c ../tools/strip.c
 
-04_message_hider.o: 04_message_hider.c
+04_message_hider.o: 04_message_hider.c 03_encrypt.h ../tools/strip.h
 	gcc -c 04_message_hider.c
 
 main: 04_message_hider.o 03_encrypt.o strip.o
